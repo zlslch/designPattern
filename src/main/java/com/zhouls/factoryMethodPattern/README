@@ -1,0 +1,27 @@
+参考:https://www.cnblogs.com/yssjun/p/11102162.html
+
+
+工厂顾名思义就是创建产品，
+    根据产品是具体产品还是具体工厂可分为简单工厂模式和工厂方法模式，
+    根据工厂的抽象程度可分为工厂方法模式和抽象工厂模式。
+    该模式用于封装和管理对象的创建，是一种创建型模式。
+
+simpleFactoryPattern:
+其中，Phone.java是抽象产品类，它⼀般是具体产品继承的⽗类或者实现的接⼝
+     MiPhone.java和IPhone.java是具体产品类，⼚类所创建的对象就是此⻆⾊的实例
+     PhoneFactory.java是⼯⼚类，简单工厂模式的核⼼，含有⼀定的商业逻辑和判断逻辑，⽤来创建产品
+     App.java是客户提需求
+
+
+factoryMethodPattern:
+其中，Phone.java是抽象产品类，它⼀般是具体产品继承的⽗类或者实现的接⼝
+     MiPhone.java和IPhone.java是具体产品类，⼚类所创建的对象就是此⻆⾊的实例
+     /**
+        工厂方法模式也就是定义一个抽象工厂AbstractFactory.java，其定义了产品的生产接口，但不负责具体的产品，
+        将生产任务交给不同的派生类具体工厂XiaoMiFactory.java、 AppleFactory.java。
+        这样不用通过指定类型来创建对象了。
+     **/
+     由 PhoneFactory.java 变为 AbstractFactory.java、  XiaoMiFactory.java、  AppleFactory.java
+     App.java是客户提需求
+
+
